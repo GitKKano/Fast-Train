@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA86C5B0A6177ABCAB7712D /* libPods-Fast Train.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AF104CBCA7D4B5B0DEED02 /* libPods-Fast Train.a */; };
 		3CB7A1921F34302400067E98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB7A1911F34302400067E98 /* AppDelegate.swift */; };
 		3CB7A1941F34302400067E98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB7A1931F34302400067E98 /* ViewController.swift */; };
 		3CB7A1971F34302400067E98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7A1951F34302400067E98 /* Main.storyboard */; };
@@ -36,6 +37,9 @@
 		3CB7A1A21F34302400067E98 /* Fast TrainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fast TrainTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB7A1A61F34302400067E98 /* Fast_TrainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fast_TrainTests.swift; sourceTree = "<group>"; };
 		3CB7A1A81F34302400067E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69AF104CBCA7D4B5B0DEED02 /* libPods-Fast Train.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Fast Train.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8AB2401B00DC61F2E1CF152 /* Pods-Fast Train.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fast Train.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fast Train/Pods-Fast Train.debug.xcconfig"; sourceTree = "<group>"; };
+		D1307BB79ED3E80C94256657 /* Pods-Fast Train.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fast Train.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fast Train/Pods-Fast Train.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA86C5B0A6177ABCAB7712D /* libPods-Fast Train.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,8 @@
 				3CB7A1901F34302400067E98 /* Fast Train */,
 				3CB7A1A51F34302400067E98 /* Fast TrainTests */,
 				3CB7A18F1F34302400067E98 /* Products */,
+				5D006AB146F9BC17FAE44A37 /* Pods */,
+				AD3509D5ACF042FB880F5ED8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +103,23 @@
 			path = "Fast TrainTests";
 			sourceTree = "<group>";
 		};
+		5D006AB146F9BC17FAE44A37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8AB2401B00DC61F2E1CF152 /* Pods-Fast Train.debug.xcconfig */,
+				D1307BB79ED3E80C94256657 /* Pods-Fast Train.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AD3509D5ACF042FB880F5ED8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69AF104CBCA7D4B5B0DEED02 /* libPods-Fast Train.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CB7A1AB1F34302400067E98 /* Build configuration list for PBXNativeTarget "Fast Train" */;
 			buildPhases = (
+				5A52EA5B4DC96AA937EA4D3B /* [CP] Check Pods Manifest.lock */,
 				3CB7A18A1F34302400067E98 /* Sources */,
 				3CB7A18B1F34302400067E98 /* Frameworks */,
 				3CB7A18C1F34302400067E98 /* Resources */,
+				D52FE415EB9C6AD9CFA3D2FD /* [CP] Embed Pods Frameworks */,
+				6CA5C0430844934FC7E6BAC3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +221,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A52EA5B4DC96AA937EA4D3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fast Train-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CA5C0430844934FC7E6BAC3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fast Train/Pods-Fast Train-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fast Train/Pods-Fast Train-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D52FE415EB9C6AD9CFA3D2FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fast Train/Pods-Fast Train-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CB7A18A1F34302400067E98 /* Sources */ = {
@@ -340,6 +421,7 @@
 		};
 		3CB7A1AC1F34302400067E98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8AB2401B00DC61F2E1CF152 /* Pods-Fast Train.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DM499UEVU5;
@@ -353,6 +435,7 @@
 		};
 		3CB7A1AD1F34302400067E98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1307BB79ED3E80C94256657 /* Pods-Fast Train.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DM499UEVU5;
@@ -411,6 +494,7 @@
 				3CB7A1AD1F34302400067E98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CB7A1AE1F34302400067E98 /* Build configuration list for PBXNativeTarget "Fast TrainTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +503,7 @@
 				3CB7A1B01F34302400067E98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
